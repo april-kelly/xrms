@@ -1,0 +1,204 @@
+$Id: README,v 1.2 2005/02/10 13:42:18 braverock Exp $
+
+*******************************
+*** WARNING WARNING WARNING ***
+
+This plugin is under *ACTIVE* development.
+Things will change. Often.  If this plugin
+interests you, PLEASE HELP DEVELOP IT!  Contact
+keith@midnighthax.com AND gpowers@users.sourceforge.net
+to keep up with the changes and make suggestions!
+
+*** WARNING WARNING WARNING ***
+*******************************
+
+Contents
+========
+
+1. What this is and what it does
+2. Installation
+3. Initial configuration and use
+4. Customisation
+5. Feedback, bugs, the future
+
+1. What this and what it does
+=============================
+
+This is the info plugin for XRMS. It provides user-defined fields in certain
+parts of XRMS (currently the company, contact and private sidebars, and within
+company accounting and company content). For a practical application,  I will
+explain the motivation for writing it. My company supplies and maintains Linux
+servers for businesses, and we needed a way to track the details of these
+servers for support purposes - for example, what IP address they are on, what
+services are enabled, what domains they handle mail for, and so on. Thus was
+born the info plugin, which allows us to associate one or more servers with a
+company, and record details for each server. The plugin allows various "groups"
+of information - for example, a "servers" section, an "ISP details" section and
+an "Other Equipment" section.
+
+2. Installation
+===============
+
+Installation requires the creation of three additional tables in the
+XRMS database. To create them you will need to know your XRMS database
+name, the username used to access the database, and the password used.
+This information will be already defined in your includes/vars.php
+file; in a future release of the info plugin this process could
+be automated. Issue the following command, substituting the appropriate
+values for the uppercase words:
+
+$ cd YOUR-XRMS-DIRECTORY/plugins/info
+$ mysql -u XRMS-USERNAME -p XRMS-DATABASE < info.sql
+
+Enter the XRMS database user password when prompted.
+
+Start XRMS and navigate to the Administration page, and then click on
+"Plugin Administration". Tick in the checkbox next to "info" and
+click Submit. If you get the message:
+
+    "plugin-cfg.php Config file can't be opened. Please 
+    check vars.php." 
+    
+then ensure that xrms-root/include/plugin-cfg.php is writable by your web
+server.
+
+3. Initial configuration and use
+================================
+
+By way of example, this section consists of a step-by-step guide to
+defining the fields used to store server information, and the adding of
+one server to a company. For each server we will store the server name,
+its IP address, whether it is in a tower or rack case, whether it Dell,
+HP or IBM system, whether it has 24hr support or not, and add a space
+for notes. These items have been chosen to best show the features of
+the info plugin.
+
+1. Click on the "Administration" on the menu bar, and at the foot of the sidebar
+click on "Manage Info Types".
+
+2. Under "Add New Info Type" enter "Servers" and select that this information
+should be displayed in Company Sidebar Bottom. Click Add.
+
+3. Display the company details for any company, and note that at the
+bottom of the right-hand sidebar there is a new section, "Servers",
+containing only a "New" button. Click on the New button.
+
+4. By default there is one "element" for each information section, and also by
+default this is labelled "Name". You can change the label, but the existence of
+one textual element is mandatory as this is how each each instance of this
+section (ie, each particular server in this example) is displayed in the
+sidebar. Enter a server name - eg, "Mail Server" - and click "Save Changes". The
+Company Details page will display, and under the "Servers" section on the
+sidebar you will see your server listed as a link. If you click on it you'll see
+a display of all server information, although at this stage we have only defined
+a name.
+
+5. We will create a new element to store the servers's IP address. If you
+haven't done so already, click on the server name to display its details. Click
+on the "Edit" button, then the "Edit element definitions" button, and finally
+the "Add new element" button, which will display a new line for us to define the
+"IP address" element.
+
+6. Fill in the new line as follows:
+
+ Label: IP address
+
+ Display in Sidebar: checked
+ 
+ Leave the rest of the row as it is, and click "Save changes". By enabling
+ "Display in Sidebar", the IP address will be visible without having to display
+ all of the server's deatils.
+
+ The list of elements will now include one labelled "IP address"
+
+7. Click "Add new element" again and define the "Case" element as follows:
+
+ Label: Case
+ Type: radio buttons
+ Default value: rack
+ Possible values: tower,rack
+ Display in Sidebar: unchecked
+
+ ...and save changes. Add the remaining elements in the same way with
+ the following values:
+
+ Label: Supplier
+ Type: combo
+ Possible values: Dell,HP,IBM
+ Display in Sidebar: unchecked
+
+ Label: 24hr support?
+ Type: checkbox
+ Display in Sidebar: unchecked
+
+ Label: Notes
+ Type: textbox
+ Display in Sidebar: unchecked
+
+8. As mentioned above, the "Name" element is mandatory and thus its "Type",
+"Display in Sidebar" and "Enabled" values cannot be changed. Click on "Back to
+Item" at the foot of the page. This will display the server details, including
+the new fields just added together with any default values those fields have.
+
+9. Click on "Edit" and fill in or change values as required. When complete,
+click on "Save Changes" and you should see all the server details displayed.
+
+10. Click on "Back" to return to the Company Details page, and note that in the
+sidebar under Servers the name of the server defined above is shown together
+with its IP address (recall that we said the IP address should be displayed in
+the sidebar). The rest of the server details may be seen by clicking on the
+server name. Display those details now.
+
+11. This is all very well, but it would be nice to have the "Notes"
+details displayed beside, rather than beneath, the other details, and we
+might like to have the "24hr support" field immediately under the server
+name. Click on "Edit" then "Edit element definitions", and make the
+following changes:
+
+ For the Notes element, change the "column" entry from 1 to 2
+ In the "order" column, leave "Name" as 0, change "24hr support" to 1,
+ and change all other values to "2". Click on Save Changes, and then
+ Back to Item on the next page. You'll see that the Notes are now displayed in a
+ column on their own.
+ 
+Click on Edit then Edit element definitions again, and change the order column
+as follows:
+ 
+ Name = 0, 24hr support = 1, all others = 2
+ 
+Click on "Save changes" then "Back to Item", and notice now that the order of
+the display has changed with Name first, 24hr support second, and the rest in no
+specific order.
+
+12. You can define as many columns as you like, and they can be given any
+name you like. Columns will be displayed in alphabetical order, so "8"
+comes before "9", "10" comes before "2", and "middle" comes after
+"first" and also after "last". Within in any one column the elements are
+displayed in "order" order following the same rules as for columns.
+
+4. Customisation
+================
+
+The file /plugins/info/info.inc facilitates some limited
+customisation. The textural strings used to describe each type of
+element ("text", "radio", "checkbox", etc) can be changed; the
+representation of a cleared and checked checkbox can be changed, various
+page headings can be changed, and finally the "Server Information" page
+which lists all servers can be sorted by company name or server name.
+
+
+5. Feedback, bugs, the future
+=============================
+
+I welcome all feedback on this plugin (like it? Tell me. Don't like it?
+Tell me why), including suggestions, bug reports, patches, feature
+requests, etc. Releases will be co-ordinated through the XRMS project.
+
+Keith Edmunds,
+Reading, UK
+keith@midnighthax.com
+
+----------------------------------------------------------------------
+     Business computing support: http://www.tiger-computing.co.uk
+       Linux consultancy: http://www.TheLinuxConsultancy.co.uk
+----------------------------------------------------------------------

@@ -1,0 +1,425 @@
+XRMS CRM - README
+
+=============================================================
+/** $Id: README,v 1.25 2006/07/25 20:34:27 braverock Exp $ **/
+
+========================
+SUMMARY
+
+XRMS CRM is a web-based application for managing business entities such as
+employees, customers, contacts, activities with those contacts, etc.
+
+XRMS generally falls into the category of application known as Customer
+Relationship Management (CRM), Sales Force Automation (SFA), with aspects
+of Business Intelligence (BI).  Basically, if your company needs to manage
+relationships with your customers and business partners, XRMS should be able
+to fulfill your needs. We believe XRMS is the only open source CRM
+application with full Computer Telephony Integration (CTI) interfaces.
+
+We believe that XRMS is the most advanced open source CRM application
+written in PHP.  We hope that you will find it useful.
+
+XRMS is a community-driven and supported development effort.  Companies that
+are using XRMS contribute money and developer time to improve the system.
+
+========================
+VERSION
+
+1.99.2 (v2.0rc3) 2006-07-25
+
+We released XRMS v1.99.1 (v2.0rc2) three months ago on 2006-04-26.
+The response from the community has been outstanding.
+We recommend that all users upgrade to the newest version.
+This version makes a number of enhancements and bug fixes over version 1.99.1.
+We have added extra 'Saved Views' capabilities to all of the data pagers in
+XRMS, allowing system and user level saved views to save sort, columns, and
+search criteria on pagers.
+The speed of execution of Activities, Opportunities, Cases, and Workflow
+has been improved by the implementation of standardized API functions,
+which are more efficient than the old non-API code in most cases.
+The continuing API work should result in more stable and predictable code for
+developers integrating to XRMS.
+A number of XRMS's dedicated translators have helped us find unlocalized strings
+and get those resolved in current code. Many of XRMS's translations have been
+reviewed and updated by their translation teams since the last release.
+A small bug in the ACL 'Manage role Permissions in Grid' interface has been
+fixed that should make ACL administration easier.  The Administrator Guide ACL
+documentation has also been extensively updated based on user feedback.
+
+Full update details are available in the CHANGELOG.
+
+As always, we recommend that if more than a week or two has passed since the date
+on a stable release tarball that you consider downloading and installing
+a development snapshot instead.
+These are normally quite stable, as the development team is probably
+using that code in production at their respective companies.
+
+We've also made a major update to the XRMS CRM project website.
+Thanks to everyone who contributed content, especially Peter Carl.
+
+
+
+========================
+COPYRIGHTS
+
+Copyright (c) 2003-2006 XRMS Development Team http://xrms.sourceforge.net/ http://xrms.org/
+Copyright (c) 2000-2003 Chris Woofter <chris_at_brokerstream_dot_com>
+
+
+========================
+REQUIREMENTS
+
+PHP v4.3.0 or higher with database extensions for your database.
+PHP v4.2 or higher with the PEAR PHP_Compat package may also work.
+
+A web server that supports PHP.
+XRMS has been extensively deployed on Apache and IIS.
+
+PHP should be compiled with gettext and recode support if you need
+i18n/internationalization/translation.
+
+We are officially stating that XRMS should now work with any database supported
+by ADOdb.  ADOdb is an excellent free software database abstraction layer for PHP.
+David Rogers did most of the heavy lifting to convert XRMS to truly be
+multi-database compliant, and the rest of the development team is very grateful
+for David's hard work.  At this point, any database supported by
+ADOdb version 4.22 *should* work seamlessly with XRMS.  To the best of our
+knowledge, XRMS has been successfully deployed on MySQL, MS SQL Server,
+and SAP-DB/MaxDB.  It should work on Oracle and DB/2 as well.
+The XRMS development team is currently collaborating with Kenny Holden
+to provide support for PostgreSQL >= v8.1.
+If you encounter problems or would like to tweak things to
+work better with some other database, please let the development team know,
+and we will be happy to work with you to get your issue resolved.
+
+See include/adodb/docs/docs-adodb.htm#drivers for more information on the
+databases supported by ADOdb.
+
+If you are using MySQL, XRMS strongly recommends MySQL v 4.x+ for better
+compatibility with the ADOdb Concat and Cast operators.  ADOdb attempts to mirror
+this functionality in older MySQL installations, so you can try things without
+upgrading MySQL first, but be aware that you may need to upgrade to a newer
+MySQL version to get everything running.
+
+XRMS is reported to work well under several Linux/Unix flavors, Mac OSX, and Windows Servers.
+
+XRMS is regularly tested with most modern browsers, please report any problems.
+
+========================
+INSTALLATION
+
+See the file INSTALL in the install/ directory.
+
+========================
+LICENSE
+
+Licensed under the Open Software License version 2.0
+
+A copy of this license -- called LICENSE -- is in this folder.
+
+XRMS also includes code that is licensed under the GNU General Public
+License (GPL) and GNU Lesser General Public License (LGPL).
+For full details see the file COPYING in this folder.
+
+Whether the Open Software License and the GPL are fully 'compatible' licenses
+in legal terms is an issue for a lawyer, not the development team of XRMS.
+When in doubt, it is the intention of the development team that the more
+'open' of the two licenses should apply.
+
+Plugins that use the plugin architecture of XRMS may have any licensing
+status that the authors of the plugin wish.  XRMS plugins do not need to
+be distributed, at the sole discretion of the author.  XRMS Plugins that are
+distributed may be distributed under any license, and will not be restricted
+to the Open Software License or the GPL.  The development team certainly
+wishes to encourage plugins to be distributed under an 'open source' or
+'free software' license, and any plugin distributed with XRMS must be
+under one of the licenses used by XRMS code.
+
+========================
+CREDITS
+
+XRMS includes, and makes extensive use of, John Lim's excellent ADOdb
+database abstraction library.
+http://php.weblogs.com/adodb/
+
+XRMS makes extensive use of code from Squirrelmail for the plugin architecture,
+i18n/translation/localization, and a variety of utility functions.
+http://www.squirrelmail.org/
+
+The calendar widget is the excellent Dynarch HTML Calendar jscalendar-0.9.6
+http://dynarch.com/mishoo/calendar.epl
+
+We also currently use Aditus Consulting's JPGraph classes in some reports.
+http://www.aditus.nu/jpgraph/index.php
+
+Some pages currently make use of the PEAR HTML_QuickForm classes.
+These may be downloaded from http://pear.php.net/package/HTML_QuickForm or by
+simply entering 'pear install HTML_QuickForm' on the command line, if you have
+PEAR installed. If you don't have PEAR installed, you may have errors
+on PEAR.php.
+
+XRMS was originally written by Chris Woofter, and is now maintained
+and extended by a dedicated community of developers and translators
+from companies around the world. See "XRMS Development Team" below.
+========================
+NOTES
+
+1. We are still adding validation on form submits, and have a long way to go here,
+   so don't try anything funny.
+
+2. Documentation is still improving  We are happily accepting contributions of user
+   documentation. Until further notice, just use the forums at SourceForge
+   or #xrms on irc.feenode.net for support.  We'll be around to answer questions.
+
+3. If you've got suggestions, please pass them along!
+
+========================
+CONTRIBUTING to XRMS
+
+Many people have asked how they may contribute code back to XRMS.
+We'll try to address most of those questions here.
+
+If you wish to contribute documentation to XRMS, please contact
+a member of the development team or post to the SourceForge Forums.
+
+If you wish to contribute code to XRMS, you should be working from
+the most current code possible.  In the case of bug fixes, this may
+save you some work (someone else may have fixed it already), and in the
+case of enhancements or other more complex patches, it will save work
+for the developers by making very clear what has changed. For large,
+sweeping changes, you probably want to discuss your proposed change on
+the SourceForge Forums or the irc channel, so that the development team
+and the XRMS user community can comment on your proposed changes.
+
+If you want to integrate third party software to XRMS, you should probably
+familiarize yourself with the Plugin architecture, as that is what plugins
+are for.  If you find yourself needing more plugin hooks as you develop your
+plugin, let the development team know by posting to the Plugins Forum
+on SourceForge.  Somebody there will be happy to help you.
+
+Start with a clean checkout from CVS or with a release tarball or snapshot.
+The rest of these instructions will assume that you are working from a
+snapshot tarball, which uncompresses to a directory called xrms.devel.
+Change as required for your installation.
+
+Update your installation from CVS using the following command from the
+directory above your working directory:
+
+cvs -q -z3 -d :pserver:anonymous@xrms.cvs.sourceforge.net:/cvsroot/xrms update -d xrms
+
+You will see cvs 'P' - Patch, 'U' Update, and 'M' Merge your files
+(vars.php, plugin-cfg.php, and include-locations.inc will most likely 'M' merge)
+
+'C' denotes a conflict.  You will need to examine the file with a conflict
+and resolve any problems.  If you anticipate conflicts (e.g. it has been weeks
+since you did a cvs update), you should probably call cvs with the -n flag,
+which will just report on what will happen when you actually update, so that
+you will be warned of conflicts in advance.
+
+Make the changes you need to current CVS code.  Make a 'clean' copy of the
+files you intend to modify, you'll need it later for creating the patch.
+
+*** Do frequent CVS updates. ***
+
+We recommend doing a CVS update before each development session.
+This makes life easier for everybody.
+Always do a CVS update immediately before submitting patch files, and
+resolve and test any conflicts.
+
+Once you've made your changes and are happy with the result, create a
+patch file for each file you changed using the following command:
+
+diff -u3 origfile changedfile >> filename.patch
+or:
+cvs diff -u3 changedfile >> filename.patch
+
+the -u3 parameter to diff is very important, because it creates a 'unified'
+diff with several lines of context.  This allows the patch program to find
+where to insert the changed lines, even if the file has changed slightly
+since the patch was generated.
+
+Post your patch with a description of the changes to the SourceForge
+Patches Forum.  It often helps to submit both a patch file and a copy
+of the full,modified file.
+
+One of the XRMS developers will review it and commit your changes to CVS.
+
+Contributions made by you will be placed under Copyright by the
+"XRMS Development Team", unless you indicate differently.
+
+Thanks for your interest in contributing to XRMS!
+
+========================
+HINTS
+
+Installation on Windows
+
+While editing the above mentioned php files you will have
+to change the path name to XRMS.
+Please enter the path name with slashes "/" (NOT
+backslashes "\", as commonly used in windows),
+e.g. "C:/Program Files/Apache Group/Apache/htdocs/xrms"
+
+Preventing some common errors
+To prevent getting too many php warning messages you
+might want to modify your php.ini as follows:
+; - Show all errors, except for notices
+error_reporting = E_ALL & ~E_NOTICE
+
+If you get errors like "Warning: Cannot modify header
+information -.. " then set the following option in your php.ini:
+output_buffering = On
+Note that turning on output buffering if you don't need it can cause
+all sorts of problems, so leave it off unless absolutely necessary.
+
+=======
+HINTS, daily reports
+
+To have daily reports emailed, put one or more of the following lines into
+the crontab of your web server (adjust paths as necessary):
+
+To have a daily report of ALL users open items emailed:
+0 6 * * * (cd /var/www/html/xrms/reports; /usr/bin/php ./open-items.php "&send_email=y&type=all&send_email_to=USER@DOMAIN.COMt&all_users=y" >> /dev/null)
+
+To have a daily report of a single user's open items emailed:
+0 6 * * * (cd /var/www/html/xrms/reports; /usr/bin/php ./open-items.php "&send_email=y&type=all&user_id=1" >> /dev/null)
+
+To have a daily report of ALL users completed items report emailed:
+0 23 * * * (cd /var/www/html/xrms/reports; /usr/bin/php ./completed-items.php "&send_email=y&type=all&send_email_to=USER@DOMAIN.COM&all_users=y" >> /dev/null)
+
+To have a daily report of a single user's completed items report emailed:
+0 23 * * * (cd /var/www/html/xrms/reports; /usr/bin/php ./completed-items.php "&send_email=y&type=all&user_id=1" >> /dev/null)
+
+========================
+XRMS Development Team
+
+Name              SF ID          Role
+------------------------------------------------------------
+Brian Peterson    braverock      Project Coordinator
+
+Andrew            s-t            Developer
+Olivier Colonna   obac           Developer
+Miguel Gonçalves  mig77          Developer
+Justin Cooper     daturaarutad   Developer
+Keith Edmunds                    Developer
+John Fawcett      johnfawcett    Developer
+Ken Gregoire      kennyg1        Documentation
+Nic Lowe          niclowe        Developer
+Beth Macknik      maulani        Developer
+Diego Ongaro      ongardie       Developer
+Cal Page          cpsource       Developer
+Glenn Powers      gpowers        Developer
+Neil Roberts      neildogg       Developer
+David Rogers      introspectshun Developer
+Walter Torres     jswalter       Developer
+David Uhlman      d2uhlman       Developer
+Aaron van Meerten vanmer         Developer
+Neil Williams     metamedia      Developer
+Chris Woofter     cdwtech        Developer - Original Author of XRMS
+
+Brunno Barrera                   Translator - Spanish
+Alan Baghumian                   Translator - Farsi
+Sebastian Becker                 Translator - German
+Özgür Çaycý                      Translator - Turkish
+Miguel Gonçalves                 Translator - Portuguese
+Roberto Durrer                   Translator - Brazilian Portuguese
+John Fawcett                     Translator - Italian
+Jean-Noel Hayart                 Translator - French
+Holger Hahn                      Translator - German
+Piotr Kabath                     Translator - Polish
+Iosif Kanakaris                  Translator - Greek
+Timo Laine                       Translator - Finnish
+Giacomo Nardone                  Translator - Italian
+Bert-Jan van Rein                Translator - Dutch
+Daniel Rodriguez                 Translator - Spanish
+Eugene N Shylaev                 Translator - Russian
+Kristóf Tóth                     Translator - Hungarian
+Yi Yang                          Translator - Chinese
+Jun Bao Wu                       Translator - Chinese
+
+XRMS also contains code contributed by many, many users.
+The XRMS Development Team is grateful for all of the code,
+suggestions, bug fixes, and discussion contributed by each of you.
+
+If you're not on this list, and think you should be,
+please let us know.
+
+============================================================
+/**
+ * Changelog for README file
+ * $Log: README,v $
+ * Revision 1.25  2006/07/25 20:34:27  braverock
+ * - bump version to 1.99.2
+ * - last text changes
+ *
+ * Revision 1.24  2006/04/26 21:16:34  braverock
+ * - bump version to 1.99.1
+ * - last text changes
+ *
+ * Revision 1.23  2006/04/22 16:00:44  braverock
+ * - bump recommended PHP version to 4.3.x, add note about PEAR PHP_Compat
+ *
+ * Revision 1.22  2006/04/11 16:00:15  braverock
+ * - bump version to 1.99.0
+ * - last text changes
+ *
+ * Revision 1.21  2006/03/03 23:33:18  ongardie
+ * - Added Diego Ongaro (at ETSZONE) as a Developer
+ *
+ * Revision 1.20  2005/05/07 17:41:25  braverock
+ * - updated to reflect 2005-05-07 release
+ *
+ * Revision 1.19  2005/03/09 17:14:05  daturaarutad
+ * updated to reflect new jpgraph usage and HTML_QuickForm requirement; added myself as a developer
+ *
+ * Revision 1.18  2005/01/12 22:54:13  braverock
+ * - updates for 2005-01-12 release
+ *
+ * Revision 1.17  2004/12/21 19:36:14  braverock
+ * - improved display of screen table
+ * - fixed code formatting
+ *
+ * Revision 1.16  2004/09/14 14:22:10  braverock
+ * - add 2004-09-14 Release notes
+ * - add translation section to Version
+ *
+ * Revision 1.15  2004/09/10 20:05:35  braverock
+ * - added Roberto Durrer as Brazilan Portugese translator
+ *
+ * Revision 1.14  2004/09/09 12:26:09  braverock
+ * - updates in advance of new release
+ *
+ * Revision 1.13  2004/08/06 14:47:08  braverock
+ * - push in changes to turn on i18n gettext
+ *
+ * Revision 1.12  2004/07/25 12:25:19  johnfawcett
+ * - added John Fawcett, SF id johnfawcett as Developer.
+ *
+ * Revision 1.11  2004/07/12 19:47:44  cpsource
+ * - Added Cal Page, SF id cpsource as Developer.
+ *
+ * Revision 1.10  2004/07/11 14:31:27  braverock
+ * - added Developer Credits section
+ *
+ * Revision 1.9  2004/07/10 11:40:26  braverock
+ * - minor edits to cvs instructions
+ * - fixed typos
+ *
+ * Revision 1.8  2004/06/21 14:23:07  braverock
+ * - updated to reflect current state of multi-database conversion
+ * - added more information for potential contributors
+ *
+ * Revision 1.7  2004/05/08 13:58:42  braverock
+ * - updated import section
+ *
+ * Revision 1.6  2004/05/04 15:18:38  gpowers
+ * - added daily report HINTS
+ *
+ * Revision 1.5  2004/04/20 14:26:27  braverock
+ * - update to include more complete information about importing CSV files
+ * - change version information
+ * - update requirements
+ *
+ * Revision 1.4  2004/03/22 15:36:35  braverock
+ * - Update to reference the install scripts and documentation
+ */

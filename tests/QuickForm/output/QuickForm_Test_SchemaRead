@@ -1,0 +1,108 @@
+<pre>Array
+(
+    [0] => Array
+        (
+            [name] => qf_id
+            [type] => primarykey
+            [displayOrder] => 0
+            [displayName] => qf_id
+        )
+
+    [1] => Array
+        (
+            [name] => case_type_id
+            [type] => int
+            [displayOrder] => 1
+            [displayName] => case_type_id
+        )
+
+    [2] => Array
+        (
+            [name] => title
+            [type] => varchar
+            [displayOrder] => 2
+            [displayName] => title
+        )
+
+    [3] => Array
+        (
+            [name] => description
+            [type] => text
+            [displayOrder] => 3
+            [displayName] => description
+        )
+
+    [4] => Array
+        (
+            [name] => entered_at
+            [type] => datetime
+            [displayOrder] => 4
+            [displayName] => entered_at
+        )
+
+    [5] => Array
+        (
+            [name] => status
+            [type] => char
+            [displayOrder] => 5
+            [displayName] => status
+        )
+
+    [6] => Array
+        (
+            [name] => booya
+            [type] => enum
+            [enums] => Array
+                (
+                    [victor] => victor
+                    [victoria] => victoria
+                    [pat] => pat
+                )
+
+            [displayOrder] => 6
+            [displayName] => booya
+        )
+
+    [7] => Array
+        (
+            [name] => qf_test_filename
+            [type] => varchar
+            [displayOrder] => 7
+            [displayName] => qf_test_filename
+        )
+
+    [8] => Array
+        (
+            [name] => qf_test_filetype
+            [type] => varchar
+            [displayOrder] => 8
+            [displayName] => qf_test_filetype
+        )
+
+    [9] => Array
+        (
+            [name] => qf_test_filesize
+            [type] => int
+            [displayOrder] => 9
+            [displayName] => qf_test_filesize
+        )
+
+    [10] => Array
+        (
+            [name] => qf_test_filedata
+            [type] => longblob
+            [displayOrder] => 10
+            [displayName] => qf_test_filedata
+        )
+
+    [11] => Array
+        (
+            [name] => qf_test_record_status
+            [type] => char
+            [displayOrder] => 11
+            [displayName] => qf_test_record_status
+        )
+
+)
+
+</pre>

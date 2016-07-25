@@ -1,0 +1,36 @@
+D/account-statuses////
+D/acl////
+D/activity-resolution-types////
+D/activity-templates////
+D/activity-types////
+D/address-types////
+D/campaign-statuses////
+D/campaign-types////
+D/case-priorities////
+D/case-statuses////
+D/case-types////
+D/categories////
+D/company-sources////
+D/company-types////
+D/country-address-format////
+D/crm-statuses////
+D/email-templates////
+D/export////
+D/import////
+D/industries////
+D/opportunity-statuses////
+D/opportunity-types////
+D/plugin////
+D/ratings////
+D/relationship-types////
+D/reports////
+D/roles////
+D/salutations////
+D/system-parameters////
+D/users////
+/data_clean.php/1.14/Tue Apr 11 16:29:25 2006//
+/index.php/1.40/Tue Apr 11 16:29:25 2006//
+/routing.php/1.10/Tue Apr 11 16:29:25 2006//
+/update.php/1.111/Wed Apr 26 21:28:29 2006//
+/sort.php/1.8/Tue Jul 25 20:52:51 2006//
+/updateto2.0.php/1.17/Tue Jul 25 20:52:54 2006//

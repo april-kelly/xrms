@@ -1,0 +1,9 @@
+The following files were removed for security and easy of maintence:
+
+doc/
+doc/template.txt
+install/configure.pl
+install/settings.cnf
+install/create-db.pl
+  - required Perl and DBI.pm
+  - replaced by install/tavi.sql

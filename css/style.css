@@ -1,0 +1,231 @@
+/**
+ * XRMS
+ *
+ * Stylesheet for basic/default style attributes.
+ * Override/extend these in themed stylesheets
+ */
+/**
+ * default font settings for entire document
+ */
+body {
+    font-family: Tahoma,sans-serif;
+    font-weight: normal;
+    color: black;
+    background-color: white;
+}
+/** --------------------
+ * PADDING / MARGINS
+ * for evenness, padding is in multiples of 2 with the exception
+ * of a few tiny cell elements that need a boost of 1
+ */
+form,
+img,
+input,
+input.button,
+select,
+textarea {
+    margin: 0px;
+}
+input.button {
+    padding: 0px;
+}
+table.widget {
+    margin: 0px auto 4px auto;
+    width: 100%;
+}
+table.widget .widget_content_graph table {
+    margin: 0px auto 4px auto; 
+}
+table.widget .sublabel {
+    padding-right: 4px;
+}
+table.embedded, td.embedded {
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
+}
+
+#loginbar,
+#msg,
+#navline {
+    padding: 2px 4px;
+}
+#Main,
+#Main #Sidebar {
+    padding-top: 4px;
+}
+/** -------
+ * FONT/TEXT SETTINGS
+ */
+td.monospace,
+input.monospace,
+select.monospace,
+textarea.monospace {
+    font-family: courier, monospace;
+}
+pre {
+    font-size: medium;
+}
+/**
+ * font weights
+ */
+table.widget .widget_header,
+#page_header,
+#msg {
+    font-weight: bold;
+}
+#profile.hidden span {
+    display: none;
+}
+/**
+ * text alignment
+ */
+#msg,
+table.widget .center,
+table.widget .widget_label_center,
+table.widget .widget_content_center,
+table.widget .widget_content_graph,
+table.widget .widget_content_form_element_center {
+    text-align: center;
+}
+#loginbar,
+table.widget .sublabel,
+table.widget .right,
+table.widget .widget_content_right,
+table.widget .widget_label_right,
+table.widget .widget_label_right_91px,
+table.widget .widget_label_right_166px {
+    text-align: right;
+}
+/** ----------
+ * OTHER - WIDGETS/TABLES/FORMS
+ */
+form {
+    display: inline;
+}
+table.widget .sublabel,
+table.widget .nowrap {
+    white-space: nowrap;
+}
+table.widget th,
+table.widget td {
+    vertical-align: top;
+    padding: 2px;
+}
+table.widget .bottomalign {
+    vertical-align: bottom;
+}
+
+table.widget .widget_label,
+table.widget .widget_label_right {
+    vertical-align: middle;
+}
+/** -------------
+ * PAGER STYLE DEFINITIONS
+ */
+#PagerHide {
+    display: block;
+    float: right;
+}
+#PagerMaximize {
+    display: block;
+    float: right;
+    padding: 15px 5px 0 0; 
+    overflow: hidden;
+    background-image: url(../img/pagerMaximizeLight.gif);
+    background-repeat: no-repeat;
+    height: 0 !important;
+    height /**/: 15px;
+}
+#PagerRestore {
+    display: block;
+    float: right;
+    padding: 15px 5px 0 0;
+    overflow: hidden;
+    background-image: url(../img/pagerRestoreLight.gif);
+    background-repeat: no-repeat;
+    height: 0 !important;
+    height /**/: 15px;
+}
+#PagerRefresh {
+    display: block;
+    float: right;
+    padding: 15px 5px 0 0;
+    overflow: hidden;
+    background-image: url(../img/pagerRefreshLight.gif);
+    background-repeat: no-repeat;
+    height: 0 !important;
+    height /**/: 15px;
+}
+
+
+#xrms_calendar .calendar_user1, 
+#xrms_calendar_legend .calendar_user1   {
+    background-color:   #fffba4;
+    vertical-align:     top;
+    border :            1px solid #cc6600;
+}
+
+#xrms_calendar .calendar_user2, 
+#xrms_calendar_legend .calendar_user2   {
+    background-color:   #f8d049;
+    vertical-align:     top;
+    border :            1px solid #cc3300;
+}
+
+#xrms_calendar .calendar_user3, 
+#xrms_calendar_legend .calendar_user3   {
+    background-color:   #cfe5f6;
+    vertical-align:     top;
+    border :            1px solid #336699;
+}
+
+#xrms_calendar .calendar_user4, 
+#xrms_calendar_legend .calendar_user4   {
+    background-color:   #84a8d7;
+    vertical-align:     top;
+    border :            1px solid #333366;
+}
+
+#xrms_calendar .calendar_user5, 
+#xrms_calendar_legend .calendar_user5   {
+    background-color:   #d8f0b8;
+    vertical-align:     top;
+    border :            1px solid #669900;
+}
+
+#xrms_calendar .calendar_user6, 
+#xrms_calendar_legend .calendar_user6   {
+    background-color:   #86c860;
+    vertical-align:     top;
+    border :            1px solid #336600;
+}
+
+#xrms_calendar .calendar_user7, 
+#xrms_calendar_legend .calendar_user7   {
+    background-color:   #d8b8f0;
+    vertical-align:     top;
+    border :            1px solid #660099;
+}
+
+#xrms_calendar .calendar_user8, 
+#xrms_calendar_legend .calendar_user8   {
+    background-color:   #8660c8;
+    vertical-align:     top;
+    border :            1px solid #330066;
+}
+
+#xrms_calendar .calendar_user9, 
+#xrms_calendar_legend .calendar_user9   {
+    background-color:   #f6cfe5;
+    vertical-align:     top;
+    border :            1px solid #993366;
+}
+
+#xrms_calendar .calendar_user10, 
+#xrms_calendar_legend .calendar_user10   {
+    background-color:   #d784a8;
+    vertical-align:     top;
+    border :            1px solid #663333;
+}
+

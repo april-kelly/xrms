@@ -1,0 +1,64 @@
+<form name=CRUD_4>Update Successful
+
+<form action="/xrms/tests/QuickForm/QuickForm_test.php" method="post" name="Edit Note" id="Edit Note" enctype="multipart/form-data">
+<table border="0" class="widget"><tr><td colspan="2" class="widget_header">Edit Note</td> </tr>
+
+	<tr>
+		<td class="widget_content widget_label_right">Description</td>
+		<td valign="top" align="left" class="widget_content_form_element">Created by QuickForm test. (modified)<input type="hidden" name="qf_test_QF_description" value="Created by QuickForm test. (modified)" /></td>
+	</tr>
+	<tr>
+		<td class="widget_content widget_label_right">Case Type</td>
+		<td valign="top" align="left" class="widget_content_form_element">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="widget_content widget_label_right">status</td>
+		<td valign="top" align="left" class="widget_content_form_element">o<input type="hidden" name="qf_test_QF_status" value="o" /></td>
+	</tr>
+	<tr>
+		<td class="widget_content widget_label_right">title</td>
+		<td valign="top" align="left" class="widget_content_form_element">&nbsp;<input type="hidden" name="qf_test_QF_title" value="" /></td>
+	</tr>
+	<tr>
+		<td class="widget_content widget_label_right">Entered At</td>
+		<td valign="top" align="left" class="widget_content_form_element">&nbsp;<input type="hidden" name="qf_test_QF_entered_at" value="" id="qf_test_QF_entered_at" /> <input id="f_trigger_0" style="CURSOR: hand" border="0" type="image" src="http://bassloada.braverock.com/xrms/img/cal.gif" /></td>
+	</tr>
+	<tr>
+		<td class="widget_content widget_label_right">booya</td>
+		<td valign="top" align="left" class="widget_content_form_element">victoria<input type="hidden" name="qf_test_QF_booya" value="victoria" /></td>
+	</tr>
+	<tr>
+		<td class="widget_content widget_label_right">qf_test_filename</td>
+		<td valign="top" align="left" class="widget_content_form_element">&nbsp;<input type="hidden" name="qf_test_QF_qf_test_filename" value="" /></td>
+	</tr>
+	<tr>
+		<td class="widget_content widget_label_right">qf_test_filedata</td>
+		<td valign="top" align="left" class="widget_content_form_element"><input name="qf_test_QF_qf_test_filedata" type="file" /></td>
+	</tr>
+	<tr>
+		<td class="widget_content widget_label_right">Status</td>
+		<td valign="top" align="left" class="widget_content_form_element">a<input type="hidden" name="qf_test_QF_qf_test_record_status" value="a" /></td>
+	</tr><input name="qf_test_QF_qf_id" type="hidden" value="1" />
+<input name="qf_test_QF_qf_test_filetype" type="hidden" value="" />
+<input name="qf_test_QF_qf_test_filesize" type="hidden" value="" />
+<input name="MAX_FILE_SIZE" type="hidden" value="2097152" />
+<input name="form_action" type="hidden" value="update" />
+<input name="return_url" type="hidden" value="http://localhost/xrms/test.php?arg=val&amp;arg2=val2" />
+
+</table>
+</form>							<script language="JavaScript" type="text/javascript">
+								Calendar.setup({
+	      						inputField     :    "qf_test_QF_entered_at",      // id of the input field
+	      						ifFormat       :    "%Y-%m-%d %H:%M:%S",       // format of the input field
+	      						showsTime      :    true,            // will display a time selector
+	      						button         :    "f_trigger_0",   // trigger for the calendar (button ID)
+	      						singleClick    :    true,           // double-click mode
+	      						step           :    1,                // show all years in drop-down boxes (instead of every other year as default)
+	      						align          :    "Bl"           // alignment (defaults to "Bl")
+								})
+							</script>       		<script language="JavaScript" type="text/javascript">
+           			document.forms["Edit Note"].btnDelete.onclick = function() {
+           			    document.forms["Edit Note"].form_action.value = 'delete';
+           			    document.forms["Edit Note"].submit();
+           			} 
+       		</script></form>
